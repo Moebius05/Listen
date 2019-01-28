@@ -2,13 +2,12 @@ package com.company;
 
 public class Node {
     int val;
-    Node next;
 
     @Override
     public String toString() {
         return "Node{" +
                 "val=" + val +
-                ", next=" + next +
+                ", >>>'" + inhalt + '\'' +
                 '}';
     }
 
@@ -20,6 +19,14 @@ public class Node {
         this.val = val;
     }
 
+    public String getInhalt() {
+        return inhalt;
+    }
+
+    public void setInhalt(String inhalt) {
+        this.inhalt = inhalt;
+    }
+
     public Node getNext() {
         return next;
     }
@@ -28,7 +35,17 @@ public class Node {
         this.next = next;
     }
 
-    public Node(int val) {
+    public Node(int val, String inhalt) {
         this.val = val;
+        this.inhalt = inhalt;
     }
+
+    public Node(int val, String inhalt, Node next) {
+        this.val = val;
+        this.inhalt = inhalt;
+        this.next = next;
+    }
+
+    String inhalt;
+    Node next;
 }
